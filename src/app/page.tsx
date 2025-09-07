@@ -1,12 +1,16 @@
 import Image from "next/image";
+import NavBar from "@/components/NavBar";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
+    <>
+      <NavBar />
+      <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+          <Image
+            className="dark:invert"
+            src="/next.svg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -65,7 +69,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          Terms
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -80,7 +84,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          FAQs
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -95,9 +99,10 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Whitpaper and Roadmap →
         </a>
       </footer>
     </div>
+    </>
   );
 }
